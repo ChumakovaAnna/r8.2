@@ -1,12 +1,12 @@
 import './App.css';
-import newHook from './components/newHook';
+import NewHook from './components/NewHook';
 
 function App() {
   return (
     <div className="App">
-      <newHook url={`${process.env.REACT_APP_SERVER_URL}/data.json`}></newHook>
-      <newHook url={`${process.env.REACT_APP_SERVER_URL}/error.json`}></newHook>
-      <newHook url={`${process.env.REACT_APP_SERVER_URL}/loading.json`}></newHook>
+      <NewHook url={`${process.env.REACT_APP_SERVER_URL}/data`}></NewHook>
+      <NewHook url={`${process.env.REACT_APP_SERVER_URL}/error`}></NewHook>
+      <NewHook url={`${process.env.REACT_APP_SERVER_URL}/loading`}></NewHook>
     </div>
   );
 }

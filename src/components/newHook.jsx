@@ -1,13 +1,17 @@
 import React from 'react'
 import useJsonFetch from '../hooks/useJsonFetch'
 
-export default function newHook({url}) {
-  const [{data, loading, error}] = useJsonFetch(url)
+export default function NewHook({url}) {
+  const [{data: result, loading, error}] = useJsonFetch(url)
+  console.log(result);
+  console.log(loading);
+  console.log(error);
+
   return (
     <div>
       {loading && <div>Loading...</div>}
       {error && <div>Error...</div>}
-      {data && <div>Data</div>}
+      {result && <div>Result</div>}
     </div>
   )
 }
